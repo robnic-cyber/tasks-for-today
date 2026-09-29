@@ -1,23 +1,28 @@
-# Tasks for Today Management System
+# Tasks for Today Management System — TSA2
 
 Developed by Robnic Mar Del Castillo using CodeIgniter 4 and MySQL.
 
-## Pages
+## Features
 
-- `/` — tasks scheduled for today
-- `/tasks` — all tasks, ordered by date
-- `/profile` — demo user information
-- `/about` — developer information
+- Public Welcome, Task List, Profile, and About pages
+- Login and logout for the demo user
+- Create and edit tasks with required-field validation
+- Archive tasks instead of permanently deleting them
+- Task management restricted to logged-in users
 
-## Run locally
+## Run locally with XAMPP
 
-1. Install PHP, Composer, and XAMPP.
+1. Put this project folder in `C:\xampp\htdocs`.
 2. Start Apache and MySQL in XAMPP.
 3. In phpMyAdmin, create a database named `tasks_for_today`.
-4. Select that database, click Import, and import `tasks_for_today.sql` from this project folder.
-5. Open a terminal in the project folder and run `composer install`.
-6. Copy the `env` file to `.env`. Set the database name to `tasks_for_today` and enter your local MySQL username and password.
-7. Run `php spark serve`.
-8. Open `http://localhost:8080` in your browser.
+4. Import `tasks_for_today_TSA2.sql` from this project folder.
+5. Open a terminal in the project folder and run `composer install` if the `vendor` folder is missing.
+6. Configure `.env` with your local database settings and the application's local base URL.
+7. Open `http://localhost/tasks-for-today%20-%20TSA2/public/` in your browser.
 
-The SQL export contains the `tasks` and `users` tables with eight sample tasks and one demo user.
+## Demo login
+
+- Username: `robnic`
+- Password: `TaskDemo2026`
+
+The password is stored as a hash in the database. The demo user can also be updated using `app/Database/Seeds/DemoUserSeeder.php`.
